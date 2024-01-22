@@ -1,4 +1,4 @@
-![image](https://github.com/smithlab-code/ciliR/assets/54943371/28a89b54-66bf-4a0a-9d84-5df441d8602e)# ciliR User Guide for Beginners
+# ciliR User Guide for Beginners
 
 This guide was written by Dr Claire M. Smith, Associate Professor UCL
 
