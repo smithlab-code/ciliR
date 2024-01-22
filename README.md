@@ -54,7 +54,6 @@ B1.8 When complete you will have a new sub-folder that contains a .txt file for 
 
  
 
- 
 **C. How to use ciliR – Part 2 – R Studio**
 
 C1.1 Download and install R and R Studio from https://rstudio-education.github.io/hopr/starting.html 
