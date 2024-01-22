@@ -26,10 +26,8 @@ A1.2 Rename each .AVI file so that it has a logical name that you can easily tra
 
 A1.3 Each file name must be unique. All .AVI files must start with a letter not a number, must be no longer than 16 characters and contain no punctuation.
 
-B. How to use ciliR – Part 1 - FiJi
-
-
-**For conversion of image files to pixel intensity per frame**
+**B. How to use ciliR – Part 1 - FiJi**
+For conversion of image files to pixel intensity per frame
 
 B1.1 Download and install FiJi from https://imagej.net/downloads 
 
@@ -86,7 +84,7 @@ C1.7 Select all the code you have written.
 
 C1.8 Click Run.
 
-C1.9 Analysis takes approximately 3sec* per .txt file depending on your processor speed. A progress bar will appear.
+C1.9 Analysis takes approximately 3sec per .txt file depending on your processor speed. A progress bar will appear.
 
 When complete all your results will be saved as one dataframe referred to as “CiliaSummary” in the environment and saved as a “summary.csv” file in your working directory.
 
