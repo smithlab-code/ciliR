@@ -99,6 +99,11 @@ You could visualise the mean CBF and active area values like this:
 
 ![image](https://github.com/smithlab-code/ciliR/assets/54943371/4d27de38-83b5-48d9-8dc3-26ce438e51b0)
 
+or view the Activity Map
+
+![image](https://github.com/smithlab-code/ciliR/assets/54943371/c614bd6d-22c5-444f-be27-70f8acb2905f)
+
+
 see "Data Vis functions in R" folder for some functions you can try
 
 
