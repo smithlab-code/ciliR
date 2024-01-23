@@ -97,11 +97,13 @@ Your results will be saved as a dataframe called ‘CiliaSummary’ and as a “
 
 You could visualise the mean CBF and active area values like this:
 
-![image](https://github.com/smithlab-code/ciliR/assets/54943371/4d27de38-83b5-48d9-8dc3-26ce438e51b0)
+![image](https://github.com/smithlab-code/ciliR/assets/54943371/b695c7d6-6f42-49e0-a24e-1a37eea2056e)
+
+
 
 or view the Activity Map
 
-![image](https://github.com/smithlab-code/ciliR/assets/54943371/c614bd6d-22c5-444f-be27-70f8acb2905f)
+![image](https://github.com/smithlab-code/ciliR/assets/54943371/1ad60f79-cd75-45d4-9f01-a99433518df4)
 
 
 see "Data Vis functions in R" folder for some functions you can try
