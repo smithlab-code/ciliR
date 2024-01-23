@@ -33,7 +33,7 @@ B1.1 Download and install FiJi from https://imagej.net/downloads
 
 B1.2 Choose version relevant to your operating system 
 
-B1.3 Once ImageJ is installed, select “Plugins” and the “Install”. Find the relevant macro from the Supplementary Folder accompanying this paper. 
+B1.3 Once ImageJ is installed, select “Plugins” and the “Install”. Find the relevant macro from the ImageJ macro folder in this repository. 
 
 If you are using .AVI files, then this will be: “ciliR_Pixel_Intensity_AVI”. 
 If you are using another file type, select: “ciliR_Pixel_Intensity_BioFormats” 
