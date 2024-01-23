@@ -93,12 +93,13 @@ You can then clear objects from the workspace to free up space or continue immed
 
 **4. Data Visualization**
 
-Your results will be saved as a dataframe called ‘CiliaSummary’ and as a “summary.csv” file in the working directory so you can use ggplot to prepare some plots. Here is an example R code that you could use for observing the mean CBF for each file:
+Your results will be saved as a dataframe called ‘CiliaSummary’ and as a “summary.csv” file in the working directory so you can use ggplot to prepare some plots.
 
+You could visualise the mean CBF and active area values like this:
 
-Or for observing the Active area of each video file:
+![image](https://github.com/smithlab-code/ciliR/assets/54943371/4d27de38-83b5-48d9-8dc3-26ce438e51b0)
 
-see Activity Map function
+see "Data Vis functions in R" folder for some functions you can try
 
 
 
