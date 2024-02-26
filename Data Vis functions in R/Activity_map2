@@ -26,7 +26,7 @@ activity_map2 <- function(CiliaSummary, column_number, grid_size, min, max) {
   grid_data <- melt(matrix_data)
   
   # Plotting the heatmap
-  p <- ggplot(grid_data, aes(X1, X2, fill = value)) +
+  p <- ggplot(grid_data, aes(X1, X2, fill = value))  + ### rename X1: Var1 etc if code fails
     geom_tile() +
     scale_fill_viridis_c(name = "CBF [Hz]", limits = c(min, max), oob = scales::squish) +
     labs(title = "Example Activity Map", x = "x [ROI]", y = "y [ROI]") +
