@@ -42,6 +42,6 @@ activity_map2 <- function(CiliaSummary, column_number, grid_size, min, max) {
 
 # Example usage
 # Generate the heatmap for the 3rd column with a grid size of 80x80, min = 0 Hz, max = 15 Hz
-p <- activity_map2(CiliaSummary, 3, 40, 0, 20)
+p <- activity_map2(CiliaSummary, 3, 80, 0, 15)
 
 p
