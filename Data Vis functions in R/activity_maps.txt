@@ -34,7 +34,7 @@ activity_maps <- function(CiliaSummary, grid_size, min, max, ncol_facet) {
   # Plotting the heatmaps with facet_wrap
   p <- ggplot(combined_data, aes(X1, X2, fill = value)) + ### rename X1: Var1 etc if code fails
     geom_tile() +
-    scale_fill_viridis_c(name = "CBF [Hz]", limits = c(min, max)) +
+    scale_fill_viridis_c(name = "CBF [Hz]", limits = c(min, max), oob = scales::squish) +
     facet_wrap(~ variable, ncol = ncol_facet) +
     labs(x = "x [ROI]", y = "y [ROI]") +
     theme_minimal() +
