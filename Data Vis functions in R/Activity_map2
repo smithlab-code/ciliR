@@ -1,0 +1,47 @@
+To create an active map with CBF values >0 incorporated as text
+
+
+activity_map2 <- function(CiliaSummary, column_number, grid_size, min, max) {
+  library(ggplot2)
+  library(reshape2)
+  library(cowplot)
+  
+  # Select the specified column
+  selected_column <- CiliaSummary[, column_number]
+  column_name <- names(CiliaSummary)[column_number]  # Get the name of the selected column
+  
+  # Reshape the data to fit into the specified grid size
+  data_length <- grid_size * grid_size
+  selected_data <- head(selected_column, data_length)
+  length(selected_data) <- data_length  # Pad with NAs if necessary
+  
+  # Replace NAs with a value or string that will not be plotted or will be filtered out
+  # For numeric data, consider using a placeholder like 0 or -1 if NAs represent missing data
+  # In this context, assuming the data is numeric and NAs can be left as is for filtering
+  
+  # Convert the vector to a matrix
+  matrix_data <- matrix(selected_data, nrow = grid_size, ncol = grid_size, byrow = TRUE)
+  
+  # Melt the matrix into a long format for ggplot
+  grid_data <- melt(matrix_data)
+  
+  # Plotting the heatmap
+  p <- ggplot(grid_data, aes(X1, X2, fill = value)) +
+    geom_tile() +
+    scale_fill_viridis_c(name = "CBF [Hz]", limits = c(min, max)) +
+    labs(title = "Example Activity Map", x = "x [ROI]", y = "y [ROI]") +
+    theme_minimal() + # Adjusted for a minimal theme without grid
+    theme(panel.grid = element_blank()) +
+    geom_text(aes(label = ifelse(is.na(value), "", round(value, 1))), color = "black", size = 3) # Add text labels, filtering out NA values
+  
+  # Return the plot
+  return(p)
+}
+
+
+
+# Example usage
+# Generate the heatmap for the 3rd column with a grid size of 80x80, min = 0 Hz, max = 15 Hz
+p <- activity_map2(CiliaSummary, 3, 40, 0, 20)
+
+p
