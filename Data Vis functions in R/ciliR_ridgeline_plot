@@ -1,0 +1,36 @@
+# Function for creating ridgeline plots with meanCBF as fill colour
+ciliR_ridgeline_plot <- function(df, min, max) {
+  library(ggplot2)
+  library(reshape2)
+  library(ggridges) # Load the ggridges package for ridgeline plots
+  library(dplyr) # Load the dplyr package for data manipulation
+
+  # Convert the dataframe to a long format
+  long_data <- melt(df)
+  long_data <- na.omit(long_data)
+
+    # Compute the mean value for each variable
+  means <- long_data %>%
+    group_by(variable) %>%
+    summarize(mean_value = mean(value)) %>%
+    ungroup()
+
+  # Merge the means back into the long data
+  long_data <- merge(long_data, means, by = "variable")
+
+  # Create the Ridgeline Plot
+  p <- ggplot(long_data, aes(x = value, y = variable, fill = mean_value)) +
+    geom_density_ridges_gradient(scale = 3, size = 0.3, rel_min_height = 0.01) +
+    scale_fill_viridis_c(name = "mean CBF[Hz]", limits = c(min, max), oob = scales::squish) +
+    labs(title = "Ridgeline Plots", x = "CBF [Hz]", y = "") +
+    xlim(min-3, max+4)+
+    theme_ridges() # Apply a ridgeline theme 
+
+  # Return the plot
+  return(p)
+}
+
+
+# Example usage
+# Generate Ridgeline Plots for each column
+ciliR_ridgeline_plot(CiliaSummary, 3, 10)
