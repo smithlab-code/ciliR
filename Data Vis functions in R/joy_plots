@@ -1,0 +1,28 @@
+##Generate ridgeline plot for each file/column
+
+# Define the function
+ciliR_joy_plots <- function(df) {
+  library(ggplot2)
+  library(ggridges)
+
+  # Convert the dataframe to a long format
+  long_data <- reshape2::melt(df)
+
+  # Create the Joy Plot
+  p <- ggplot(long_data, aes(x = value, y = variable, fill = variable)) +
+    stat_density_ridges(scale = 0.9, rel_min_height = 0.01) +
+    labs(title = "Joy Plots", x = "CBF [Hz]", y = "") +
+    theme_ridges() +
+    theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+
+  # Return the plot
+  return(p)
+}
+
+
+
+# Example usage
+# Generate Joy Plots for all columns
+p2 <- ciliR_joy_plots(df)
+
+p2
