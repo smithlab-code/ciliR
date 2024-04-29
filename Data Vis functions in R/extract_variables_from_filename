@@ -1,0 +1,9 @@
+#This code will extract the characters of the original filename (which is now the column header in the CiliaSummary dataframe) 
+#and make new variables so that you can group data together and average etc...
+
+df <- CiliaSummary %>%
+  gather(key="text", value="value") %>%
+  mutate(CBF = round(as.numeric(value),2)) %>%
+  mutate(treatment = substr(text, 1, 4)) %>% # will read 1-4 characters of original filename as new variable called "treatment"
+  mutate(well = substr(text, 18, 19)) %>% # will read 18-19 characters of original filename as new variable called "well"
+  mutate(timepoint = substr(text, 12, 16))  # will read 12-16 characters of original filename as new variable called "treatment"
