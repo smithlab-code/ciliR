@@ -67,7 +67,7 @@ print("Crop by", CROP2_TYPE);
 //find main directory
  dir1 = getDirectory("Input Folder: contains just ND2 files to be converted"); //select an input folder.
   list = getFileList(dir1); //make a list of the filenames in the folder.
- 	dir2 = dir1+" Text Files"+File.separator;
+ 	dir2 = dir1+"Text Files"+File.separator;
 	File.makeDirectory(dir2);
 		
 setBatchMode(true); //turn on batch mode.
