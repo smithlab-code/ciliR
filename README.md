@@ -101,10 +101,14 @@ You could visualise the mean CBF and active area values like this:
 
 
 
-or view the Activity Map
+or view histogram or the Activity Map
 
-![image](https://github.com/smithlab-code/ciliR/assets/54943371/1ad60f79-cd75-45d4-9f01-a99433518df4)
+<img width="372" alt="image" src="https://github.com/user-attachments/assets/e7e3f7fc-8627-4051-ae43-721a31d37b8c" />
 
+
+Activity map - with Hz labels:
+
+<img width="608" alt="image" src="https://github.com/user-attachments/assets/be092178-5414-4cf0-8b4c-f6f03a7613c9" />
 
 see "Data Vis functions in R" folder for some functions you can try
 
